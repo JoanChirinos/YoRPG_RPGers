@@ -10,10 +10,6 @@ public class Protagonist extends Character {
     //Instance variables
     //-To store player values
     private String name;
-    private int hp;
-    private int strength;
-    private int def;
-    private double atr;
 
     //Takes String nam --> stores to name
     //Sets default values for other instance vars
@@ -25,34 +21,9 @@ public class Protagonist extends Character {
 	atr = 0.4; 
     }
 
-    //Returns bool true if player hp > 0
-    public boolean isAlive() {
-	return (hp > 0);
-    }
-
-    //Returns player defense
-    public int getDefense() {
-	return def;
-    }
-
     //Returns player name
     public String getName() {
 	return name;
-    }
-
-    //Sets hp to current hp - int loss
-    public void lowerHP(int loss) {
-	hp -= loss;
-    }
-
-    //Attacks a Monster object.
-    //--> Damage dealt is strength * atr - the monster's defense
-    //--> Then uses Monster.lowerHP to "do damage" and returns int damage
-    public int attack(Monster dude) {
-	int damage = (int) ((strength * atr) - dude.getDefense());
-	if (damage < 0) damage = 0;
-	dude.lowerHP(damage);
-	return damage;
     }
 
     //Adds 50 to strength, and decreases defense by 10
