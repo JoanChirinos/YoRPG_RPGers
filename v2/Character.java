@@ -28,6 +28,7 @@ public class Character {
     public int attack(Character dude) {
 	int damage = (int) ((strength * atr) - dude.getDefense());
 	if (damage < 0) damage = 0;
+	dude.hp -= damage;
 	return damage;
     }
     
