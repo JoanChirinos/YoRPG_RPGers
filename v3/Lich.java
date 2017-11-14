@@ -8,9 +8,11 @@ HW31 -- Ye Olde Role Playing Game, Expanded .
 public class Lich extends Monster{
     public Lich(){
 	super();
-	atr = 2.;
+	atr = 1.5;
+	hp = 100;
+	def = 15;
     }
     public static String about(){
-	return "Liches are Monsters that use magic spells to deal the most damage possible! They do 2x the normal damage!";
+	return "Liches are Monsters that use magic spells to deal the most damage possible, but they end up being relatively weak if you manage to get close to them! They do 1.5x the normal damage, but have less HP and defense than other monsters!";
     }
 }

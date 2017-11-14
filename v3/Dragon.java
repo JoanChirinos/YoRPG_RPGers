@@ -10,8 +10,9 @@ public class Dragon extends Monster{
 	super();
 	hp = 500;
 	atr = 0.17;
+	def = 35;
     }
     public static String about(){
-	return "Dragons are Monsters that have 500 HP! It takes longer to take these large creatures down.";
+	return "Dragons are Monsters that have 500 HP! It takes longer to take these large creatures down, and their scales naturally makes it harder to do damage to them. They have a harder time to aim than other Monsters, so their overall damage is lower.";
     }
 }
