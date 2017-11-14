@@ -2,8 +2,8 @@ public class Knight extends Protagonist {
 
     // Public constructor makes Knight subclass instances of class Protagonist.
     // Each knight subclass inherits Protagonist variables and methods
-    public Knight() {
-	super();
+    public Knight(String name) {
+	super(name);
 	hp = 150;
 	strength = 90;
 	def = 25;
