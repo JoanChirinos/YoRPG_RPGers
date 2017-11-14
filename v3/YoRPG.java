@@ -112,7 +112,7 @@ public class YoRPG
 			    break;
 			}
 		    }
-		    catch (IOException e) { }
+		    catch (NumberFormatException e) { }
 		}
 
 		if (proClass == 2) {
@@ -129,7 +129,7 @@ public class YoRPG
 			    break;
 			}
 		    }
-		    catch (IOException e) { }
+		    catch (NumberFormatException e) { }
 		}
 
 		if (proClass == 3) {
@@ -146,12 +146,13 @@ public class YoRPG
 			    break;
 			}
 		    }
-		    catch (IOException e) { }
+		    catch (NumberFormatException e) { }
 		}
 		
 	    }//end try
 
 	    catch(IOException e) { }
+	    catch(NumberFormatException e) { }
 
 	} //end while loop
 
