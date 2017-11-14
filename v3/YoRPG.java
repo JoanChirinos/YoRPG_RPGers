@@ -96,7 +96,23 @@ public class YoRPG
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
+	    int monsterType = (int) (Math.random() * 10);
+	    if (monsterType < 5) {
+		smaug = new Monster();
+		System.out.println("It appears to be a regular monster!");
+	    }
+	    else if (monsterType < 8) {
+		smaug = new Ninja();
+		System.out.println("It appears to be a Ninja!");
+	    }
+	    else if (monsterType < 10) {
+		smaug = new Lich();
+		System.out.println("It appears to be a Lich!");
+	    }
+	    else {
+		smaug = new Dragon();
+		System.out.println("It appears to be a Dragon!");
+	    }
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
