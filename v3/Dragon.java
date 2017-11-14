@@ -9,6 +9,7 @@ public class Dragon extends Monster{
     public Dragon(){
 	super();
 	hp = 500;
+	atr = 0.17;
     }
     public static String about(){
 	return "Dragons are Monsters that have 500 HP! It takes longer to take these large creatures down.";
