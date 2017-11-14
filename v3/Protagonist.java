@@ -9,7 +9,7 @@ public class Protagonist extends Character {
 
     //Instance variables
     //-To store player values
-    private String name;
+    protected String name;
 
     //Takes String nam --> stores to name
     //Sets default values for other instance vars

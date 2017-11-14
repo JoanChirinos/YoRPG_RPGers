@@ -8,10 +8,10 @@
 public class Character {
 
     // Instance Vars
-    public int hp;
-    public int strength;
-    public int def;
-    public double atr;
+    protected int hp;
+    protected int strength;
+    protected int def;
+    protected double atr;
 
     public boolean isAlive() {
 	return (hp > 0);

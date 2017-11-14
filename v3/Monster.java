@@ -8,7 +8,7 @@ HW28 -- Ye Olde Role Playing Game
 public class Monster extends Character {
 
     //Instance vars
-    private String name;
+    protected String name;
 
     //Default constructor sets default values for Monster objects
     public Monster() {
