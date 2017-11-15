@@ -11,29 +11,23 @@ this is compensated for by a higher attack rating.
 ### **Assassin**
 Assassins are the weakest class in terms of health. However, they
 compensate for this by having the highest attack rating of all
-classes. They also have high defense because they are better at
+classes. They also have decent defense values because they are better at
 dodging.
 
 ### **Tank**
 Tanks have the highest health and defense values of all classes.
-However, they have a relatively low attack rating and strength.
+However, they deal relatively low damage.
 
 
 ## Monster Subclasses
 
-### **Monster**
-These are your garden-variety monsters. They do a decent amount
-of damage and have ordinary health. They're also the most common,
-spawning about 50% of the time
-
 ### **Ninja**
-Ninjas will attack you when you least expect it! They do 1.2x the
-normal damage and, because of their elusive nature, they will be
-harder to take down due to their amazing defensive skills.
+Ninjas will attack you when you least expect it! They do 2.5x the
+normal damage, but are slightly less elusive than other monsters.
 
 ### **Lich**
-Liches are scary monster that use magic spells to deal the most
-damage possible! They do a whopping 2x the normal monster damage
+Liches are scary monster that use magic spells to deal a decent amount of 
+damage! They deal 2.25x the normal monster damage
 
 ### **Dragon**
 Dragons are HUGE monsters that have 500 hp! They take a while to
