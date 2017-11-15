@@ -27,6 +27,7 @@ public class Character {
 
     public int attack(Character dude) {
 	int damage = (int) ((strength * atr) - dude.getDefense());
+	damage += (int) (Math.random() * 7 - 3);
 	if (damage < 0) damage = 0;
 	dude.hp -= damage;
 	return damage;
