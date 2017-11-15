@@ -6,20 +6,20 @@ public class Knight extends Protagonist {
 	super(name);
 	hp = 150;
 	strength = 90;
-	def = 25;
-	atr = 0.45;
+	def = 95;
+	atr = 0.55;
     }
 
-    // Buffs strength by 30 points, and nerfs defense by 10 points
+    // Buffs strength by 30 points, and nerfs defense by 15 points
     public void specialize() {
 	strength = 120;
-	def = 15;
+	def = 80;
     }
 
     // Resets strength and defense values to normal
     public void normalize() {
 	strength = 90;
-	def = 25;
+	def = 95;
     }
     
     // About method returns Knight subclass description

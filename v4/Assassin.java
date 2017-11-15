@@ -5,20 +5,20 @@ public class Assassin extends Protagonist {
 	super(name);
 	hp = 100;
 	strength = 65;
-	def = 40;
+	def = 65;
 	atr = 2;
     }
 
-    // Buffs strength by 20 points, and buffs defense by 30 points
+    // Buffs strength by 30 points, and nerf defense by 15 points
     public void specialize() {
-	strength = 85;
-	def = 70;
+	strength = 95;
+	def = 50;
     }
 
     // Resets strength and defense values to normal
     public void normalize() {
 	strength = 65;
-	def = 40;
+	def = 65;
     }
     
     // About method explains Assassin subclass
