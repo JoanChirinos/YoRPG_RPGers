@@ -1,5 +1,5 @@
 # YoRPG_RPGers
-Repository for YoRPG by the RPGers
+Repository for YoRPG by the RPGers-Rohan Ahammed, Joan Chirinos, and Aaron Li
 
 ## Protagonist Subclasses
 
