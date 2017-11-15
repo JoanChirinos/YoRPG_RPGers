@@ -52,7 +52,7 @@ public class YoRPG
     {
 	String s;
 	String name = "";
-	s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
+	s = "~~~ Welcome to Bestest RPG! ~~~\n";
 
 	s += "\nChoose your difficulty: \n";
 	s += "\t1: Easy\n";

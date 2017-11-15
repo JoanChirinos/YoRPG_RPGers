@@ -1,3 +1,12 @@
+-balance
+-protag classes + monster classes
+-different attacks
+-anything else we want to add
+-magic/mana system
+-health pots on monster death
+-other drops
+
+
 # YoRPG_RPGers
 Repository for YoRPG by the RPGers-Rohan Ahammed, Joan Chirinos, and Aaron Li
 
