@@ -99,8 +99,9 @@ public class YoRPG
 		int yesNo;
 	    
 		if (proClass == 1) {
+		    pat = new Assassin(name);
 		    System.out.println("\nYou've selected Assassin\n\n"
-				       + Assassin.about());
+				       + pat.about());
 		    System.out.print("\nIs this your final choice?"
 				     + "\n1: Yes"
 				     + "\n2: No"
@@ -116,8 +117,9 @@ public class YoRPG
 		}
 
 		if (proClass == 2) {
+		    pat = new Knight(name);
 		    System.out.println("\nYou've selected Knight\n\n"
-				       + Knight.about());
+				       + pat.about());
 		    System.out.print("\nIs this your final choice?"
 				     + "\n1: Yes"
 				     + "\n2: No"
@@ -133,8 +135,9 @@ public class YoRPG
 		}
 
 		if (proClass == 3) {
+		    pat = new Tank(name);
 		    System.out.println("\nYou've selected Tank\n\n"
-				       + Tank.about());
+				       + pat.about());
 		    System.out.print("\nIs this your final choice?"
 				     + "\n1: Yes"
 				     + "\n2: No"
@@ -161,8 +164,6 @@ public class YoRPG
 	  End Protagonist class selector
 	  =========================================*/
 
-	//instantiate the player's character
-	pat = new Protagonist( name );
 
     }//end newGame()
 

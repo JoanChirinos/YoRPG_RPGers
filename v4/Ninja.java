@@ -8,7 +8,7 @@ HW31 -- Ye Olde Role Playing Game, Expanded .
 public class Ninja extends Monster{
     public Ninja(){
 	super();
-	atr = 1.1;
+	atr = 2.5;
 	def = 30;
 	hp = 110;
     }

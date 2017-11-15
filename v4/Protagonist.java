@@ -18,7 +18,7 @@ public abstract class Protagonist extends Character {
 	name = nam;
 	hp = 125;
 	strength = 100;
-	def = 20;
+	def = 40;
 	atr = 0.4; 
     }
 
@@ -32,4 +32,7 @@ public abstract class Protagonist extends Character {
 
     // Abstract method for reseting buffed and nerfed values
     public abstract void normalize();    
+
+    // Abstract method for about method
+    public abstract String about();
 }
