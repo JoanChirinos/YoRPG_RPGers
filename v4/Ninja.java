@@ -13,6 +13,6 @@ public class Ninja extends Monster{
 	hp = 110;
     }
     public static String about(){
-	return "Ninjas are Monsters that will attack you when you least expect it and do 1.1x the normal damage and because of their elusive nature, will be harder to take down due to their amazing defensive skills, but they lack the health to endure a lot of damage over a period of time";
+	return "Ninjas are Monsters that will attack you when you least expect it and do 2.5x the normal damage and because of their elusive nature, will be harder to take down due to their amazing defensive skills, but they lack the health to endure a lot of damage over a period of time";
     }
 }

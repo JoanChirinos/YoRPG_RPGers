@@ -13,6 +13,6 @@ public class Lich extends Monster{
 	def = 35;
     }
     public static String about(){
-	return "Liches are Monsters that use magic spells to deal the most damage possible, but they end up being relatively weak if you manage to get close to them! They do 1.5x the normal damage, but have less HP and defense than other monsters!";
+	return "Liches are Monsters that use magic spells to deal the most damage possible and protect themselves with their defensive spells, but they fail at close combat. They do 2.25x the normal damage, but have less HP, but more defense than other monsters!";
     }
 }

@@ -23,12 +23,11 @@ However, they deal relatively low damage.
 
 ### **Ninja**
 Ninjas will attack you when you least expect it! They do 2.5x the
-normal damage, but are slightly less elusive than other monsters.
+normal damage, but are more elusive than other monsters so they have more defense, but lack the ability to excel in prolonged fights due to their low HP.
 
 ### **Lich**
 Liches are scary monster that use magic spells to deal a decent amount of 
-damage! They deal 2.25x the normal monster damage
+damage! They deal 2.25x the normal monster damage and have defensive spells that make them harder to damage, but lack the HP for close combat.
 
 ### **Dragon**
-Dragons are HUGE monsters that have 500 hp! They take a while to
-kill, but do an average amount of damage
+Dragons are HUGE monsters that have 500 hp! They take a while to kill, but do an average amount of damage and have hard scales that make them hard to attack.
