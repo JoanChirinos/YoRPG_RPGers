@@ -176,6 +176,10 @@ public class YoRPG
       =============================================*/
     public boolean playTurn()
     {
+	boolean didBlock = false;
+	boolean didAbility = false;
+	pat.heal(10);
+	System.out.println("\nYou have " + pat.getHP() + " health\n");
 	int i = 1;
 	int d1, d2;
 
@@ -200,33 +204,68 @@ public class YoRPG
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
-		// Give user the option of using a special attack:
-		// If you land a hit, you incur greater damage,
-		// ...but if you get hit, you take more damage.
+		didBlock = false;
+		didAbility = false;
+
 		try {
-		    System.out.println( "\nDo you feel lucky?" );
-		    System.out.println( "\t1: Nay.\n\t2: Aye!" );
+		    System.out.println( "\nWhat will you do?" );
+		    System.out.println( "\t1: Attack."+
+					"\n\t2: Special Attack!"+
+					"\n\t3: Block." +
+					"\n\t4: " + pat.getAbilityName());
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
 
-		if ( i == 2 )
-		    pat.specialize();
-		else
-		    pat.normalize();
-
+		pat.normalize();
 		d1 = pat.attack( smaug );
-		d2 = smaug.attack( pat );
+		d2 = smaug.attack ( pat );
+		
+		if ( i == 4 ) {
+		    d1 = pat.ability( smaug );
+		    if (pat.getAbilityName().equals("Half Counter")) {
+			d2 = d1;
+			didAbility = true;
+		    }
+		    else if (pat.getAbilityName().equals("Reckless")) {
+			d2 = (int) ( smaug.attack( pat ) * 1.5);
+			didAbility = true;
+		    }
+			
+		}
+		else if ( i == 3) {
+		    if (pat.block()) {
+			didBlock = true;
+		    }
+		    else
+			System.out.println("You're too tired to block!");
+		}
+		else if ( i == 2) {
+		    pat.specialize();
+		    d1 = pat.attack( smaug );
+		}
+		else {
+		    pat.normalize();
+		    d1 = pat.attack( smaug );
+		}
+		
+		if (!(didBlock)) {
+		    if (!(didAbility))
+			d2 = smaug.attack( pat );
+		    
+		    smaug.lowerHP( d1 );
+		    pat.lowerHP( d2 );
+		
 
-		System.out.println( "\n" + pat.getName() + " dealt " + d1 +
-				    " points of damage.");
+		    System.out.println( "\n" + pat.getName() + " dealt " + d1 +
+					" points of damage.\nThe Monster now has " +
+					smaug.getHP() + " health left!");
 
-		/*
-		  I THINK THE PLAYER HEALTH AND THE MONSTER HEALTH SHOULD BE DISPLAYED
-		*/
-
-		System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
-				    " for " + d2 + " points of damage.");
+		    System.out.println( "\n" + "Ye Olde Monster smacked " +
+					pat.getName() + " for " + d2 + " points "
+					+ "of damage.\nYou now have " +
+					pat.getHP() + " health left!");
+		}
 	    }//end while
 
 	    //option 1: you & the monster perish
@@ -255,6 +294,15 @@ public class YoRPG
 	    //option 3: the beast slays you
 	    else if ( !pat.isAlive() ) {
 		System.out.println( "Ye olde self hath expired. You got dead." );
+		if (Math.random() < 0.03) {
+		    System.out.println("HOWEVER, our lord and savior Geoffrey" +
+				       "has granted you another chance and" +
+				       "healed you by 100 health. Use it" +
+				       "wisely...");
+		    pat.heal(100);
+
+		    return true;
+		}
 		return false;
 	    }
 	}//end else

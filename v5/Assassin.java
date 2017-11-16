@@ -1,5 +1,8 @@
 public class Assassin extends Protagonist {
 
+    //Change blockCountdown to 3
+    int blockCountdown = 3;
+
     // Public constructor: Assassin is-a Protagonist so it inherits its methods and vars
     public Assassin(String name) {
 	super(name);
@@ -19,6 +22,36 @@ public class Assassin extends Protagonist {
     public void normalize() {
 	strength = 65;
 	def = 25;
+    }
+
+    //Returns Assassin's ability name
+    public String getAbilityName() {
+	return "Hidden Attack";
+    }
+    
+    //Assassin's Special ability does a stronger attack with better defense;
+    public int ability( Monster smaug ) {
+	System.out.println("As an assassin, you attack while hidden");
+	int oldStrength = strength;
+	int oldDef = def;
+	strength += 5;
+	boolean hideSuccess = (Math.random() < 0.5);
+	if (hideSuccess)
+	    def += 30;
+	else
+	    def += 15;
+	int damage = attack(smaug);
+	strength = oldStrength;
+	def = oldDef;
+	return damage;
+    }
+
+    // Blocking method
+    public boolean block() {
+	if (blockCountdown <= 0)
+	    return false;
+	blockCountdown--;
+	return true;
     }
     
     // About method explains Assassin subclass

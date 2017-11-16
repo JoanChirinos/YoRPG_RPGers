@@ -1,5 +1,8 @@
 public class Knight extends Protagonist {
 
+    //Changes blockCountdown to 5
+    int blockCountdown = 5;
+
     // Public constructor makes Knight subclass instances of class Protagonist.
     // Each knight subclass inherits Protagonist variables and methods
     public Knight(String name) {
@@ -20,6 +23,24 @@ public class Knight extends Protagonist {
     public void normalize() {
 	strength = 80;
 	def = 75;
+    }
+
+    //Returns Knight's ability name
+    public String getAbilityName() {
+	return "Reckless";
+    }
+
+    public int ability( Monster smaug ) {
+	int damage = (int) ( attack( smaug ) * 1.25 );
+	return damage;
+    }
+
+    // Blocking method
+    public boolean block() {
+	if (blockCountdown <= 0)
+	    return false;
+	blockCountdown--;
+	return true;
     }
     
     // About method returns Knight subclass description

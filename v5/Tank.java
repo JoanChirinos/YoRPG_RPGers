@@ -1,5 +1,8 @@
 public class Tank extends Protagonist {
 
+    //Change blockCountdown to 7
+    int blockCountdown = 7;
+
     // Default constructor takes on Protagonist
     // instance variable and makes them class specific
     public Tank(String name) {
@@ -20,6 +23,26 @@ public class Tank extends Protagonist {
     public void normalize() {
 	def = 70;
 	atr = 0.95;
+    }
+
+    // Returns Tank's ability name
+    public String getAbilityName() {
+	return "Half Counter";
+    }
+
+    // Full Counter ability deflects damage monster does and
+    // tank only takes half damage
+    public int ability( Monster smaug ) {
+	int damage = smaug.attack(this);
+	return ( damage / 2 );
+    }
+
+    // Blocking method
+    public boolean block() {
+	if (blockCountdown <= 0)
+	    return false;
+	blockCountdown--;
+	return true;
     }
     
     // Description of Tank subclass of Protagonist

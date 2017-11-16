@@ -10,6 +10,7 @@ public abstract class Protagonist extends Character {
     //Instance variables
     //-To store player values
     protected String name;
+    protected int blockCountdown;
 
     
     //Takes String nam --> stores to name
@@ -36,12 +37,20 @@ public abstract class Protagonist extends Character {
     public void increaseAttack(int add) {
 	strength += add;
     }
+    // Abstract method for blocking
+    public abstract boolean block();
+
+    // Abstract method for returning each class's ability name
+    public abstract String getAbilityName();
+    
+    // Abstract method for each class's special ability
+    public abstract int ability( Monster smaug );
     
     // Abstract method for specialized attacks
     public abstract void specialize();
 
     // Abstract method for reseting buffed and nerfed values
-    public abstract void normalize();    
+    public abstract void normalize();
 
     // Abstract method for about method
     public abstract String about();

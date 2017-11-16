@@ -21,6 +21,13 @@ public class Character {
 	return def;
     }
 
+    public int getHP() {
+	if (hp < 0) {
+	    return 0;
+	}
+	return hp;
+    }
+
     public void lowerHP(int loss) {
 	hp -= loss;
     }
@@ -29,7 +36,6 @@ public class Character {
 	int damage = (int) ((strength * atr) - dude.getDefense());
 	damage += (int) (Math.random() * 7 - 3);
 	if (damage < 0) damage = 0;
-	dude.hp -= damage;
 	return damage;
     }
     
