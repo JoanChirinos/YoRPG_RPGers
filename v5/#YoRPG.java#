@@ -184,7 +184,7 @@ public class YoRPG
 	boolean didBlock = false;
 	boolean didAbility = false;
 	pat.heal(10);
-	pat.replenishMana(10);
+	
 	System.out.println("\nYou have " + pat.getHP() + " health\n");
 	int i = 1;
 	int d1, d2;
@@ -230,7 +230,7 @@ public class YoRPG
 		if ( i == 4) {
 		    if (pat.getMana() <= 0){
 		    i = 1;
-		    System.out.println("\n\tSorry, you don't have enough mana to do a special ability! \n\tLooks like you'll just do a normal attack instead ...");
+		    System.out.println("\nSorry, you don't have enough mana to do a special ability! \nLooks like you'll just do a normal attack instead ...");
 		}
 		    else{
 		    d1 = pat.ability( smaug );

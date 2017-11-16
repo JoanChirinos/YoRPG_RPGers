@@ -28,10 +28,17 @@ public abstract class Protagonist extends Character {
     public String getName() {
 	return name;
     }
-    //Returns player mana
+    // Returns player mana
     public int getMana(){
+	if (mana < 0) mana = 0;
 	return mana;
     }
+
+    // Replenishes mana
+    public void replenishMana(int x) {
+	mana += x;
+    }
+    
     // Healing method
     public void heal(int add) {
 	hp += add;
