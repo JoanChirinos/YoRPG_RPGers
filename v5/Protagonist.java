@@ -27,6 +27,16 @@ public abstract class Protagonist extends Character {
 	return name;
     }
 
+    // Healing method
+    public void heal(int add) {
+	hp += add;
+    }
+
+    // Method to increase attack
+    public void increaseAttack(int add) {
+	strength += add;
+    }
+    
     // Abstract method for specialized attacks
     public abstract void specialize();
 
@@ -35,4 +45,5 @@ public abstract class Protagonist extends Character {
 
     // Abstract method for about method
     public abstract String about();
-}
+    
+}//end class

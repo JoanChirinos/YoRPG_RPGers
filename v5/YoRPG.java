@@ -234,12 +234,22 @@ public class YoRPG
 		System.out.println( "'Twas an epic battle, to be sure... " + 
 				    "You cut ye olde monster down, but " +
 				    "with its dying breath ye olde monster. " +
-				    "laid a fatal blow upon thy skull." );
+				    "laid a fatal blow upon thy skull.\n" );
+		if (Math.random() < 0.03) {
+		    System.out.println("HOWEVER, our lord and savior Geoffrey" +
+				       "has granted you another chance and" +
+				       "healed you by 100 health. Use it" +
+				       "wisely...");
+		    pat.heal(100);
+
+		    return true;
+		}
 		return false;
 	    }
 	    //option 2: you slay the beast
 	    else if ( !smaug.isAlive() ) {
 		System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );
+		lootDrop(pat);
 		return true;
 	    }
 	    //option 3: the beast slays you
@@ -253,6 +263,53 @@ public class YoRPG
     }//end playTurn()
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+    public void lootDrop(Protagonist dave) {
+	double drop = Math.random();
+
+	if (drop < 0.65) {
+	    System.out.println("The Monster did not drop anything...");
+	}
+	else if (drop < 0.85) {
+	    int which = (int) (Math.random() * 2);
+	    if (which == 0) {
+		System.out.println("The Monster dropped a small HEALTH potion!"+
+				   "\n\t+15 HP!");
+		dave.heal(15);
+	    }
+	    else {
+		System.out.println("The Monster dropped a small ATTACK potion!"+
+				   "\n\t+5 Attack!");
+		dave.increaseAttack(5);
+	    }
+	}
+	else if (drop < 0.95) {
+	    int which = (int) (Math.random() * 2);
+	    if (which == 0) {
+		System.out.println("The Monster dropped a medium HEALTH " +
+				   "potion!\n\t+20 HP!");
+		dave.heal(20);
+	    }
+	    else {
+		System.out.println("The Monster dropped a medium ATTACK " +
+				   "potion!\n\t+10 Attack!");
+		dave.increaseAttack(10);
+	    }
+	}
+	else if (drop < 0.95) {
+	    int which = (int) (Math.random() * 2);
+	    if (which == 0) {
+		System.out.println("The Monster dropped a huge HEALTH potion!"+
+				   "\n\t+30 HP!");
+		dave.heal(30);
+	    }
+	    else {
+		System.out.println("The Monster dropped a huge ATTACK potion!"+
+				   "\n\t+20 Attack!");
+		dave.increaseAttack(20);
+	    }
+	}
+    }
+	    
 
     public static void main( String[] args )
     {
