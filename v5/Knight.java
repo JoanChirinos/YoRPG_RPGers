@@ -11,6 +11,7 @@ public class Knight extends Protagonist {
 	strength = 80;
 	def = 75;
 	atr = 0.75;
+	mana = 100;
     }
 
     // Buffs strength by 30 points, and nerfs defense by 15 points
@@ -31,6 +32,7 @@ public class Knight extends Protagonist {
     }
 
     public int ability( Monster smaug ) {
+	mana -= 25;
 	int damage = (int) ( attack( smaug ) * 1.25 );
 	return damage;
     }
@@ -45,7 +47,7 @@ public class Knight extends Protagonist {
     
     // About method returns Knight subclass description
     public String about() {
-	return "The Knight subclass of class Protagonist is the most balanced class of all Protagonist subclasses. It has slightly above average health and defense values, but a lower strength value that is compensated by a higher attack rating.";
+	return "The Knight subclass of class Protagonist is the most balanced class of all Protagonist subclasses. It has slightly above average health and defense values, but a lower strength value that is compensated by a higher attack rating. They need 25 mana for their special ability!";
     }
 }
 

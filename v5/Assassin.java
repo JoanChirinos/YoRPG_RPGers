@@ -2,7 +2,7 @@ public class Assassin extends Protagonist {
 
     //Change blockCountdown to 3
     int blockCountdown = 3;
-
+    
     // Public constructor: Assassin is-a Protagonist so it inherits its methods and vars
     public Assassin(String name) {
 	super(name);
@@ -10,6 +10,7 @@ public class Assassin extends Protagonist {
 	strength = 65;
 	def = 25;
 	atr = 2;
+	mana = 100;
     }
 
     // Buffs strength by 10 points, and nerf defense by 15 points
@@ -56,6 +57,6 @@ public class Assassin extends Protagonist {
     
     // About method explains Assassin subclass
     public String about() {
-	return "Assassins are the weakest Protagonist subclass in terms of health values, but it compensates for this by having the highest attack rating of all Protagonists. Assassins also have a higher defense because they are able to dodge attacks better.";
+	return "Assassins are the weakest Protagonist subclass in terms of health values, but it compensates for this by having the highest attack rating of all Protagonists. Assassins also have a higher defense because they are able to dodge attacks better. They do not need mana to do their special ability!";
     }
 }

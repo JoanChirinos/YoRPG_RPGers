@@ -2,7 +2,7 @@ public class Tank extends Protagonist {
 
     //Change blockCountdown to 7
     int blockCountdown = 7;
-
+    
     // Default constructor takes on Protagonist
     // instance variable and makes them class specific
     public Tank(String name) {
@@ -11,6 +11,7 @@ public class Tank extends Protagonist {
 	strength = 60;
 	def = 70;
 	atr = 0.95;
+	mana = 100;
     }
 
     // Nerfs defense by 10 points and buff attack rating to 1.5
@@ -34,6 +35,7 @@ public class Tank extends Protagonist {
     // tank only takes half damage
     public int ability( Monster smaug ) {
 	int damage = smaug.attack(this);
+	mana -=25;
 	return ( damage / 2 );
     }
 
@@ -47,6 +49,6 @@ public class Tank extends Protagonist {
     
     // Description of Tank subclass of Protagonist
     public String about() {
-	return "Tanks are Protagonists that have the highest health and defenses of all Protagonists. However, their increased defenses come at the cost of a lower attack rating and strength.";
+	return "Tanks are Protagonists that have the highest health and defenses of all Protagonists. However, their increased defenses come at the cost of a lower attack rating and strength. They need 25 mana for their special ability!";
     }
 }

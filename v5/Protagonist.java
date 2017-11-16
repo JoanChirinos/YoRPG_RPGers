@@ -11,6 +11,7 @@ public abstract class Protagonist extends Character {
     //-To store player values
     protected String name;
     protected int blockCountdown;
+    protected int mana;
 
     
     //Takes String nam --> stores to name
@@ -20,14 +21,17 @@ public abstract class Protagonist extends Character {
 	hp = 125;
 	strength = 100;
 	def = 40;
-	atr = 0.4; 
+	atr = 0.4;
     }
 
     //Returns player name
     public String getName() {
 	return name;
     }
-
+    //Returns player mana
+    public int getMana(){
+	return mana;
+    }
     // Healing method
     public void heal(int add) {
 	hp += add;

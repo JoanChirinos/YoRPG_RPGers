@@ -225,8 +225,13 @@ public class YoRPG
 		pat.normalize();
 		d1 = pat.attack( smaug );
 		d2 = smaug.attack ( pat );
-		
-		if ( i == 4 ) {
+
+		if ( i == 4) {
+		    if (pat.getMana() <= 0){
+		    i = 1;
+		    System.out.println("\nSorry, you don't have enough mana to do a special ability! \nLooks like you'll just do a normal attack instead ...");
+		}
+		    else{
 		    d1 = pat.ability( smaug );
 		    if (pat.getAbilityName().equals("Half Counter")) {
 			d2 = d1;
@@ -236,7 +241,7 @@ public class YoRPG
 			d2 = (int) ( smaug.attack( pat ) * 1.5);
 			didAbility = true;
 		    }
-			
+		    }	
 		}
 		else if ( i == 3) {
 		    if (pat.block()) {
@@ -269,7 +274,9 @@ public class YoRPG
 		    System.out.println( "\n" + "Ye Olde Monster smacked " +
 					pat.getName() + " for " + d2 + " points "
 					+ "of damage.\nYou now have " +
-					pat.getHP() + " health left!");
+					pat.getHP() + " health left!" +
+			               "\nYou have " + pat.getMana() +
+					" mana remaining!");
 		}
 	    }//end while
 

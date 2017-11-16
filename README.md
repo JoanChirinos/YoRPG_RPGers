@@ -13,32 +13,34 @@ Repository for YoRPG by the RPGers-Rohan Ahammed, Joan Chirinos, and Aaron Li
 ### **Knight**
 The Knight is the most balanced class. It has slightly more health
 and defense values, but slightly lower strength value. However,
-this is compensated for by a higher attack rating.
+this is compensated for by a higher attack rating. They start with 100 mana.
 
 ##### Ability
 The ability **Reckless** allows the knight to do 1.25 times the normal
 damage. However, you have to let your guard down to do so much
-damage, so the monster does 1.5 times the normal damage
+damage, so the monster does 1.5 times the normal damage. It costs 25 mana.
 
 ### **Assassin**
 Assassins are the weakest class in terms of health. However, they
 compensate for this by having the highest attack rating of all
 classes. They also have decent defense values because they are better at
-dodging.
+dodging. They start with 100 mana, but see themselves as superior to mana using
+Knights and Tanks.
 
 ##### Ability
 The ability **Hidden Attack** allows the assassin to do more damage
 and potentially have a lot more defense. However, if the monster
-spots you trying to hide, you don't gain as much defense
+spots you trying to hide, you don't gain as much defense. It costs no
+mana to use.
 
 ### **Tank**
 Tanks have the highest health and defense values of all classes.
-However, they deal relatively low damage.
+However, they deal relatively low damage. They start with 100 mana.
 
 ##### Ability
 The ability **Half Counter** allows you to deflect half of the
 Monster's attack back at it. However, you don't do any additional
-damage
+damage. It costs 25 mana to use.
 
 ## Monster Subclasses
 
@@ -61,6 +63,7 @@ Dragons are HUGE monsters that have 500 hp! They take a while to kill, but do an
 * Super-secret after-death healing by Geoffrey almighty
 * "Hidden" duck
 * 3 tiers of monster health+/attack+ drops - small, medium, and huge
+* Mana System (No regeneration)
 
 # Code Restructurings
 We had to restructure a lot of code to work with our vision.
